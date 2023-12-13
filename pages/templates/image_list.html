@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>News Articles</h1>
+  <ul>
+    {% for image in images %}
+      <li>
+        <h3>{{ image.title }}</h3>
+        <img src="{{ image.image.url }}" alt="{{ image.title }}" class="img-thumbnail">
+        <p>{{ image.body }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
